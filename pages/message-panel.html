@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>گیاه لند | پنل کاربری - پیام های دریافتی<</title>
+    <link rel="stylesheet" href="../styles/app.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+<svg class="hidden">
+    <symbol id="arrow-down" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.41 8.29492L12 12.8749L16.59 8.29492L18 9.70492L12 15.7049L6 9.70492L7.41 8.29492Z"
+              fill="currentColor"/>
+    </symbol>
+    <symbol id="arrow-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"/>
+    </symbol>
+</svg>
+<section class="md:pr-72">
+    <panel-site></panel-site>
+    <main class="max-w-[1332px] mx-auto px-4">
+        <!--    panel title    -->
+        <h2 class="panel-title ">پیام های دریافتی</h2>
+        <!--    message wrapper    -->
+        <div id="message-wrapper" class="mt-4 space-y-4">
+        </div>
+    </main>
+</section>
+
+<div class="overlay hidden fixed inset-0 bg-black/30 transition-all"></div>
+<script type="module" src="../scripts/message-panel.js"></script>
+</body>
+</html>
