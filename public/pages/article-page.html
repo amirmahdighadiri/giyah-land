@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>گیاه لند | گیاه پزشک</title>
+    <link rel="stylesheet" type="text/css" href="../styles/app.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body class="overflow-hidden">
+<!-- icon package -->
+<svg class="hidden">
+    <symbol id="arrow-left-circle-mini" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+        <g clip-path="url(#clip0_9_2121)">
+            <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.25-7.25a.75.75 0 000-1.5H8.66l2.1-1.95a.75.75 0 10-1.02-1.1l-3.5 3.25a.75.75 0 000 1.1l3.5 3.25a.75.75 0 001.02-1.1l-2.1-1.95h4.59z"
+                  clip-rule="evenodd"></path>
+        </g>
+        <defs>
+            <clipPath id="clip0_9_2121">
+                <path d="M0 0h20v20H0z"></path>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol id="search" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol id="arrow-up-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"></path>
+    </symbol>
+    <symbol id="x-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+    </symbol>
+    <symbol id="check-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+    </symbol>
+</svg>
+<!--loader-->
+<div class="fixed inset-0 z-50 bg-white flex-center">
+    <div class="page-loader"></div>
+</div>
+<!-- header -->
+<header>
+    <header-site></header-site>
+</header>
+<!-- main -->
+<main>
+    <div class="container">
+        <!--  result of article  -->
+        <section class="mt-8 sm:mt-10 mb-8 lg:mb-[60px]">
+            <div class="flex flex-col sm:flex-row gap-y-2 justify-between items-center">
+                <!--       name of search         -->
+                <div class="flex items-center gap-x-2.5">
+                    <span class="hidden sm:inline-block w-4 h-4 bg-[#FBBF24] rounded-sm"></span>
+                    <h2 class="font-YekanBakh-Bold text-2xl">وبلاگ</h2>
+                </div>
+                <!--       count of search         -->
+                <span class="font-YekanBakh-Medium sm:text-xl text-spanish-gray-200"
+                      id="number-of-article">380 مقاله</span>
+            </div>
+        </section>
+        <!--  article wrapper and search box and sort btn  -->
+        <section class="grid grid-cols-12 gap-x-7 gap-y-5">
+            <!--     input wrapper     -->
+            <aside class="col-span-full lg:col-span-4 xl:col-span-3">
+                <!--       search box input         -->
+                <div class="h-[68px] flex items-center justify-between border border-forest-green-100 rounded-xl p-5 bg-light-gray-200">
+                    <input type="text" class="search-input w-full border-0 outline-0 bg-transparent font-YekanBakh-Medium"
+                           id="filter-search-box" placeholder="جستجو بین مقالات">
+                    <div id="search-box-btn" class="lg:cursor-pointer">
+                        <svg class="w-8 h-8 text-forest-green-100">
+                            <use href="#search"></use>
+                        </svg>
+                    </div>
+                </div>
+            </aside>
+            <!--      sort and article box      -->
+            <section class="col-span-full lg:col-span-8 xl:col-span-9">
+                <!--       sort btn for small screen       -->
+                <div class="w-full flex md:hidden items-center gap-x-6 mb-6">
+                    <div class="flex-center gap-x-2 w-full border border-forest-green-100 rounded-xl p-5 bg-light-gray-200 font-MorabbaMedium text-forest-green-100" id="sort-mobile-btn">
+                        <svg class="w-6 h-6">
+                            <use href="#arrow-up-down"></use>
+                        </svg>
+                        عادی
+                    </div>
+                </div>
+                <!--        sort btn for big screen        -->
+                <div class="w-full h-[68px] hidden md:flex items-center gap-x-6 border border-forest-green-100 rounded-xl p-5 bg-light-gray-200 font-MorabbaMedium text-spanish-gray-300 mb-6">
+                    <div class="flex items-center gap-x-2">
+                        <svg class="w-7 h-7">
+                            <use href="#arrow-up-down"></use>
+                        </svg>
+                        <span class="">مرتب سازی بر اساس :</span>
+                    </div>
+                    <div class="flex items-center gap-x-5 lg:gap-x-8">
+                        <a href="#" class="sort-button sort-button--active" data-id="normal" role="button">عادی</a>
+                        <a href="#" class="sort-button" data-id="new" role="button">جدید ترین</a>
+                        <a href="#" class="sort-button" data-id="old" role="button">قدیمی ترین</a>
+                    </div>
+                </div>
+                <!--       article items        -->
+                <div class="grid grid-cols-1 xs:grid-cols-2 xl:grid-cols-3 gap-6" id="article-box-wrapper">
+                    <!--         create and handle in js           -->
+                </div>
+            </section>
+        </section>
+    </div>
+    <!--  sort popup for mobile  -->
+    <div id="mobile-sort-box" class="fixed right-0 left-0 bottom-0 z-20 bg-white rounded-xl translate-y-full overflow-hidden transition-all">
+        <div class="h-16 flex items-center justify-between font-MorabbaMedium bg-light-gray-200 shrink-0 px-5">
+            <span class="">مرتب سازی بر اساس</span>
+            <div id="close-sort-box-btn">
+                <svg class="w-6 h-6">
+                    <use href="#x-circle"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="px-5">
+            <a href="#" class="mobile-sort-btn sort-button--active border-b" data-id="normal" role="button">
+                <span>عادی</span>
+                <svg class="w-6 h-6">
+                    <use href="#check-circle"></use>
+                </svg>
+            </a>
+            <a href="#" class="mobile-sort-btn border-b" data-id="new" role="button">
+                <span>جدید ترین</span>
+            </a>
+            <a href="#" class="mobile-sort-btn" data-id="old" role="button">
+                <span>قدیمی ترین</span>
+            </a>
+        </div>
+    </div>
+</main>
+<!-- footer -->
+<footer class="bg-light-gray-200 pt-6 pb-6 sm:pb-10 mt-16 md:mt-[130px]">
+    <footer-site></footer-site>
+</footer>
+<!-- overlays-->
+<div class="overlay hidden fixed inset-0 bg-black/30 transition-all"></div>
+<div class="blur-overlay hidden fixed inset-0 backdrop-blur"></div>
+<div class="blur-mobile-overlay hidden fixed inset-0 backdrop-blur"></div>
+<div class="blur-search-overlay hidden fixed inset-0 backdrop-blur"></div>
+<div class="blur-sort-overlay hidden z-10 fixed inset-0 backdrop-blur"></div>
+<!-- scripts -->
+<script type="module" src="../scripts/article-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: "YekanBakh Regular";
+        src: url("../fonts/YekanBakh-Regular.woff") format('woff');
+    }
+    @font-face {
+        font-family: "YekanBakh Medium";
+        src: url("../fonts/YekanBakh-Medium.woff") format('woff');
+    }
+    @font-face {
+        font-family: "YekanBakh Bold";
+        src: url("../fonts/YekanBakh-Bold.woff") format('woff');
+    }
+    @font-face {
+        font-family: "YekanBakh Heavy";
+        src: url("../fonts/YekanBakh-Heavy.woff") format('woff');
+    }
+    @font-face {
+        font-family: "Roboto Medium";
+        src: url("../fonts/roboto/Roboto-Medium.ttf") format('woff');
+    }
+    @font-face {
+        font-family: "Roboto Bold";
+        src: url("../fonts/roboto/Roboto-Bold.ttf") format('woff');
+    }
+    @font-face {
+        font-family: "Roboto Black";
+        src: url("../fonts/roboto/Roboto-Black.ttf") format('woff');
+    }
+    @font-face {
+        font-family: "Morabba Light";
+        src: local("Morabba Light"), url("../fonts/Morabba/woff2/Morabba-Light.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Morabba Medium";
+        src: local("Morabba Medium"), url("../fonts/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Morabba Bold";
+        src: local("Morabba Bold"), url("../fonts/Morabba/woff2/Morabba-Bold.woff2") format("woff2");
+        font-display: swap;
+    }
+    body {
+        @apply font-YekanBakh;
+    }
+}
+
+@layer components {
+    .search-input input:-webkit-autofill,
+    .search-input input:-webkit-autofill:hover,
+    .search-input input:-webkit-autofill:focus,
+    .search-input input:-webkit-autofill:active {
+        background-color: transparent !important;
+        box-shadow: 0 0 0px 1000px #EFEFEF inset !important;
+    }
+    .search-input input:focus {
+        background-color: inherit !important;
+        outline: none !important;
+    }
+
+    .hide {
+        @apply block;
+    }
+
+    .show {
+        @apply hidden;
+    }
+
+    .password .hide {
+        @apply hidden;
+    }
+
+    .password .show {
+        @apply block;
+    }
+
+    .form-btn {
+        @apply w-full h-14 flex-center bg-forest-green-100 text-white rounded-xl text-lg mt-8;
+    }
+
+    .form-btn-active {
+        @apply w-full h-14 flex-center bg-white text-forest-green-100 border-2 border-forest-green-100 rounded-xl text-lg mt-8;
+    }
+
+    .title {
+        @apply font-MorabbaMedium text-2xl text-forest-green-100 mb-6;
+    }
+
+    .box-width {
+        width: auto !important;
+    }
+
+    .artilc-gradient {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        linear-gradient(180deg, rgba(65, 127, 86, 0) 0%, rgba(65, 127, 86, 0.3) 100%);
+
+    }
+
+    .like-active {
+        color: #ED2E2E;
+        fill: #ED2E2E !important;
+    }
+
+    .address-box {
+        position: relative;
+    }
+
+    .address-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -12px;
+        margin: auto 0;
+        width: 8px;
+        height: 8px;
+        background: #417F56;
+        border-radius: 100%;
+    }
+
+    /* Reset input */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .input-color {
+        @apply border-light-gray-600 text-spanish-gray-200;
+    }
+
+    .input-focus-color {
+        @apply border-forest-green-100 text-forest-green-100;
+    }
+
+    .panel-input-focus-color {
+        @apply border-light-gray-200 text-light-gray-200;
+    }
+
+    .input-label {
+        position: absolute;
+        top: 12px;
+        right: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 29px;
+        padding: 0 4px;
+        border-radius: 12px;
+        font-family: "Morabba Medium";
+        background-color: #fff;
+        transition: all 200ms ease-in;
+    }
+
+    .content-basket {
+        display: none;
+        margin-top: 24px;
+    }
+
+    .basket-info {
+        display: block;
+    }
+
+    .basket-not-empty .content-basket {
+        display: block;
+    }
+
+    .basket-not-empty .basket-info {
+        display: none;
+    }
+
+    .user-panel-item-active {
+        background-color: #F3FDFA;
+        color: #417F56;
+    }
+
+    .panel-title {
+        font-family: "Morabba Medium";
+        padding-right: 10px;
+        border-right: 2px solid #417F56;
+    }
+
+    .toggle-marker,
+    .toggle-marker-mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #E1E1E1;
+        border-radius: 9999px;
+        position: relative;
+        padding: 0 4px;
+        transition: all 200ms ease-in;
+    }
+
+    .toggle-marker::before,
+    .toggle-marker-mobile::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: #F6F6F6;
+        border-radius: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        transition: all 200ms ease-in;
+    }
+
+    .type-filter:checked + .toggle-marker,
+    .type-filter-mobile:checked + .toggle-marker-mobile,
+    .filter-toggle:checked + .checkbox-marker {
+        background-color: #417F56;
+    }
+
+    .type-filter:checked + .toggle-marker::before,
+    .type-filter-mobile:checked + .toggle-marker-mobile::before {
+        transform: translateX(-22.5px);
+    }
+
+    .sort-button--active {
+        color: #417F56 !important;
+    }
+
+    .mobile-sort-btn {
+        @apply flex items-center justify-between py-5 font-MorabbaMedium text-spanish-gray-300;
+    }
+
+    /* HTML: <div class="loader"></div>  ----->>>> btn loader */
+    .loader {
+        width: 30px;
+        padding: 4px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: #417F56;
+        --_m: conic-gradient(#0000 10%, #000),
+        linear-gradient(#000 0 0) content-box;
+        -webkit-mask: var(--_m);
+        mask: var(--_m);
+        -webkit-mask-composite: source-out;
+        mask-composite: subtract;
+        animation: l3 1s infinite linear;
+    }
+
+    @keyframes l3 {
+        to {
+            transform: rotate(1turn)
+        }
+    }
+
+    /* HTML: <div class="loader"></div>   ----->>>> page loader */
+    .page-loader {
+        width: 50px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 8px solid #417F56;
+        animation: l20-1 0.8s infinite linear alternate,
+        l20-2 1.6s infinite linear;
+    }
+
+    @keyframes l20-1 {
+        0% {
+            clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%)
+        }
+        12.5% {
+            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%)
+        }
+        25% {
+            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%)
+        }
+        50% {
+            clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+        }
+        62.5% {
+            clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+        }
+        75% {
+            clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%)
+        }
+        100% {
+            clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%)
+        }
+    }
+    @keyframes l20-2 {
+        0% {
+            transform: scaleY(1) rotate(0deg)
+        }
+        49.99% {
+            transform: scaleY(1) rotate(135deg)
+        }
+        50% {
+            transform: scaleY(-1) rotate(0deg)
+        }
+        100% {
+            transform: scaleY(-1) rotate(-135deg)
+        }
+    }
+
+    /* برای مرورگرهای مبتنی بر WebKit */
+    ::-webkit-scrollbar {
+        width: 10px; /* عرض اسکرول‌بار */
+        height: 10px; /* ارتفاع اسکرول‌بار برای اسکرول افقی */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f5f5f5; /* رنگ پس‌زمینه‌ی اسکرول‌بار */
+        border-radius: 10px; /* گوشه‌های گرد */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #417F56; /* رنگ اسکرول‌بار (گرادینت) */
+        border-radius: 10px; /* گوشه‌های گرد */
+        border: 2px solid #f5f5f5; /* فاصله بین thumb و track */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #417F56;
+    }
+}
+
+@layer utilities {
+    .flex-center {
+        @apply flex items-center justify-center ;
+    }
+
+    .font-custom {
+        font-family: "Morabba Medium", "Roboto Medium";
+    }
+
+    input {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+}
