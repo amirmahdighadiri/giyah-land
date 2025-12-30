@@ -63,5 +63,4 @@ npm run dev
 ![Demo 4](./public/demo/4.png)
 <br/>
 ![Demo 5](./public/demo/5.png)
-<br/>
-![Demo 6](./public/demo/6.png)
+
