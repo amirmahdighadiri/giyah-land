@@ -13,7 +13,7 @@ template.innerHTML = `
                 <div class="absolute bottom-7 right-2.5 sm:right-5 z-20">
                     <h5 class="font-MorabbaMedium text-base sm:text-xl text-white mb-4" id="article-title">گیاه بونسای</h5>
                     <a href="#" class="w-[178px] sm:w-48 h-10 sm:h-12 flex-center gap-x-2 font-MorabbaLight text-sm sm:text-lg border border-white rounded-xl text-white" id="article-link">
-                      
+               
                     </a>
                 </div>
             </div>

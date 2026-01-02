@@ -1,7 +1,7 @@
 const template = document.createElement('template')
 
 template.innerHTML = `
-<link rel="stylesheet" type="text/css" href="./public/styles/app.css">
+<link rel="stylesheet" type="text/css" href="../styles/app.css">
 <svg class="hidden">
     <symbol id="arrow-left-circle-mini" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
         <g clip-path="url(#clip0_9_2121)">
